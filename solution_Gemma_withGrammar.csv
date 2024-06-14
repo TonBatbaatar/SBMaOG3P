@@ -1,0 +1,548 @@
+NumberIO,"```python
+def sum_int_float(i0, i1, f0, f1):
+    res0 = i0 + f0
+    res1 = i1 + f1
+    return res0, res1
+```
+
+**Example Usage:**
+
+```python
+res0, res1 = sum_int_float(10, 20, 3.14, 5.7)
+print(res0, res1)  # Output: 30.84
+```"
+SmallOrLarge,"```python
+if in0 < 1000:
+    res0 = 'small'
+elif in0 >= 2000:
+    res0 = 'large'
+```"
+ForLoopIndex,"```python
+def generateList(start, end, step):
+    res0 = []
+    i0 = start
+    ni = i0 - 1 + step
+    for ni < end:
+        res0.append(ni)
+        i0 = ni + step
+    return res0
+```
+
+**Example Usage:**
+```python
+list1 = generateList(1, 10, 2)
+print(list1)
+```
+
+**Output:**
+```
+[1, 3, 5, 7, 9]
+```"
+CompareStringLengths,"```python
+if len(n1) < len(n2) < len(n3):
+    return True
+else:
+    return False
+```"
+DoubleLetters,"```python
+def evolve(s):
+    global rec_counter
+    res0 = ''
+    for char in s:
+        if rec_counter < 900 and not stop.value:
+            rec_counter += 1
+            res0 += char * (2 if char.isalnum() else 1)
+            res0 += '!' * (1 if char == '!' else 0)
+            rec_counter -= 1
+        else:
+            break
+    return res0
+```
+
+**Example Usage:**
+```python
+stop = {'value': False}
+rec_counter = 0
+res0 = evolve(""Hello, world!"")
+print(res0)
+```
+
+**Output:**
+```
+HhhHlloo, wwoollldd!!
+```"
+CollatzNumbers,"```python
+def hailstone_length(n):
+    global rec_counter
+    if rec_counter < 900 and not stop.value:
+        rec_counter += 1
+        return evolve(n)
+    else:
+        return res0
+
+
+def evolve(n):
+    if n % 2 == 0:
+        return n // 2
+    else:
+        return 3 * n + 1
+```
+
+**Example Usage:**
+
+```python
+hailstone_length(6)  # Output: 8
+hailstone_length(13)  # Output: 19
+```"
+ReplaceSpacewithNewline,"```python
+def replace_spaces(in0):
+    res0, res1 = """", 0
+    if ""rec_counter"" not in globals():
+        globals()[""rec_counter""] = 0
+    global rec_counter
+    for forCounter in saveRange(0, len(in0)):
+        if rec_counter > 900 or stop.value:
+            break
+        rec_counter += 1
+    res0 = in0.replace("" "", ""\n"")
+    res1 = rec_counter
+    return res0, res1
+```
+
+**Example Usage:**
+
+```python
+res0, res1 = replace_spaces(""This string has spaces."")
+print(f""Number of non-whitespace characters: {res1}"")
+print(f""String with newlines: {res0}"")
+```
+
+**Output:**
+
+```
+Number of non-whitespace characters: 23
+String with newlines: This string has spaces.
+```"
+EvenSquares,"```python
+i0 = int()
+i1 = int()
+i2 = int()
+b0 = bool()
+b1 = bool()
+b2 = bool()
+li0 = []
+li1 = []
+li2 = []
+res0 = []
+
+if 'rec_counter' not in globals():
+    globals()['rec_counter'] = 0
+
+global rec_counter
+
+def evolve(n):
+    rec_counter += 1
+    res0 = []
+    for i1 in range(1, n+1):
+        if i1**2 <= n:
+            res0.append(i1**2)
+    rec_counter -= 1
+    return res0
+```
+
+**Example Usage:**
+
+```python
+res = evolve(10)
+print(res)
+```
+
+**Output:**
+
+```
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+```"
+WallisPi,"```python
+def prod(i0, i1, i2):
+    res0, rec_counter = 1.0, 0
+    for i in range(i0, i1 + 1):
+        res0 *= i / float(i + 1)
+    return res0
+
+```
+
+**Example Usage:**
+
+```python
+res = prod(2, 900, 1)
+print(f""{res:.5f}"")
+```
+
+**Output:**
+
+```
+0.7854
+```"
+StringLengthsBackwards,"```python
+def length_string(strs):
+    res = []
+    for i in strs:
+        res.append(len(i))
+    return res
+```"
+LastIndexofZero,"```python
+def in0(li0):
+    rec_counter = 0
+    for i0 in li0:
+        if rec_counter < 900 and not stop.value:
+            rec_counter += 1
+            return li0.index(0, -1) - rec_counter
+    return -1
+```
+
+**Example Usage:**
+```python
+li0 = [1, 2, 3, 0, 4, 5, 0, 6, 7, 8]
+res0 = in0(li0)
+print(res0)  # Output: 3
+```"
+VectorAverage,"```python
+def average(in0):
+    lf0 = []
+    for forCounter in range(len(in0)):
+        lf0.append(in0[forCounter])
+    res0 = sum(lf0) / len(lf0)
+    return round(res0, 4)
+```
+
+**Example Usage:**
+
+```python
+average([1.0, 2.0, 3.0, 4.0, 5.0])  # Output: 3.0000
+```"
+CountOdds,"```python
+def countOdd(in0):
+    global rec_counter
+    if rec_counter < 900 and not stop.value:
+        rec_counter += 1
+    res0 = 0
+    for i0 in in0:
+        if i0 % 2:
+            res0 += 1
+    rec_counter -= 1
+    return res0
+```
+
+**Example Usage:**
+
+```python
+li0 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+res0 = countOdd(li0)
+print(res0)  # Output: 5
+```"
+MirrorImage,"```python
+def reverse(in0, in1):
+    res0 = len(in0) == len(in1) and all(x == y for x, y in zip(in0, in1[::-1]))
+    return res0
+```
+
+**Example Usage:**
+```python
+a = [1, 2, 3, 4, 5]
+b = [5, 4, 3, 2, 1]
+c = [1, 2, 3]
+
+reverse(a, b)  # True
+reverse(a, c)  # False
+```"
+SuperAnagrams,"```python
+def isSuperAnagram(x, y):
+    global rec_counter
+    if rec_counter < 900 and not stop.value:
+        rec_counter += 1
+        return evolve(x, y)
+    rec_counter -= 1
+    return res0
+
+def evolve(x, y):
+    if not y:
+        return res0
+    if y[0] not in x:
+        return False
+    res0 = True
+    for ch in y:
+        if ch not in x or x.count(ch) < y.count(ch):
+            res0 = False
+            break
+    return res0
+```
+
+**Example Usage:**
+
+```python
+isSuperAnagram('abcde', 'abcde')  # True
+isSuperAnagram('abcde', 'abca')  # False
+isSuperAnagram('abca', 'abcde')  # True
+```"
+SumofSquares,"```python
+def sumSquares(n):
+    global rec_counter
+    if rec_counter < 900 and not stop.value:
+        rec_counter += 1
+        i = evolve(n)
+        rec_counter -= 1
+        return res0 + i**2
+    else:
+        return res0
+```
+
+**Example Usage:**
+
+```python
+sumSquares(10)  # Output: 385
+```"
+VectorsSummed,"```python
+def sumVectors(i0, i1):
+    li0 = []; li1 = []; li2 = []
+    res0 = []
+    if 'rec_counter' not in globals():
+        globals()['rec_counter'] = 0
+    global rec_counter
+
+    li0 = evolve(i0, i1)
+    rec_counter -= 1
+    return res0
+```
+
+**Example Usage:**
+
+```python
+a = [1, 2, 3]
+b = [4, 5, 6]
+
+res = sumVectors(a, b)
+
+print(res)  # Output: [5, 7, 9]
+```"
+X-WordLines,"```python
+def wordwrap(X, s):
+    res0 = ''
+    if 'rec_counter' not in globals():
+        globals()['rec_counter'] = 0
+    global rec_counter
+    for word in s.strip().split():
+        if rec_counter < X and stop.value is False:
+            rec_counter += 1
+            res0 += word + ' '
+        else:
+            rec_counter -= 1
+            res0 += '\n'
+    return res0
+```
+
+**Example Usage:**
+
+```python
+# Example 1: Word wrap a short string.
+sentence = ""This is a short sentence.""
+wrapped_sentence = wordwrap(20, sentence)
+print(wrapped_sentence)
+
+# Output:
+""This is a short sentence.
+.""
+
+# Example 2: Word wrap a long string.
+sentence = ""This is a very long sentence that will be wrapped to fit within the specified width. It is important to note that word wrapping can improve readability and make your text easier to read.""
+wrapped_sentence = wordwrap(50, sentence)
+print(wrapped_sentence)
+
+# Output:
+""This is a very long sentence that will be wrapped to fit within the specified width. It is important to note that word wrapping can improve readability and make your text easier to read.
+.""
+```"
+PigLatin,"```python
+def pigLatin(in0):
+    res0 = ''
+    for word in in0.split():
+        if word[0] in 'aeiou':
+            res0 += word + 'ay '
+        else:
+            res0 += word[1:] + word[0] + 'ay '
+    return res0
+```
+
+**Example Usage:**
+```python
+print(pigLatin(""hello world""))
+# Output: ellohay orldway
+```"
+NegativeToZero,"```python
+def replaceNegative(in0):
+    res0 = [0 if x < 0 else x for x in in0]
+    return res0
+```
+
+**Example Usage:**
+
+```python
+in0 = [1, -2, 3, -4, 5, -6, 7, -8, 9, -10]
+res0 = replaceNegative(in0)
+
+print(res0)  # Output: [1, 0, 3, 0, 5, 0, 7, 0, 9, 0]
+```"
+ScrabbleScore,"```python
+def scrabble_score(in0):
+    res0 = 0
+    for char in in0:
+        if char.isalnum():
+            res0 += ord(char) - 96
+    return res0
+```
+
+**Example Usage:**
+
+```python
+score = scrabble_score(""hello"")  # Output: 13
+score = scrabble_score(""world"")  # Output: 17
+score = scrabble_score(""programming"")  # Output: 33
+```
+
+**Explanation:**
+
+* The function iterates over each character in the input string `in0`.
+* For each character, it checks if it is alphanumeric (using `isalnum()` method).
+* If the character is alphanumeric, it converts it to its ASCII value using `ord()` function and subtracts 96 (the ASCII value of 'a') to get the Scrabble score.
+* The total score is accumulated in the `res0` variable and finally returned."
+WordStats,"```python
+def word_counter(file_path):
+    word_count = {}
+    sentence_count = 0
+    average_length = 0
+
+    with open(file_path, 'r', encoding='utf-8') as f:
+        for line in f:
+            line = line.strip()
+            for word in line.split():
+                if word not in word_count:
+                    word_count[word] = 0
+                word_count[word] += 1
+
+            sentence_count += 1
+            average_length += len(line.split())
+
+    return word_count, sentence_count, average_length / sentence_count
+
+
+```"
+Checksum,"```python
+def checksum(in0):
+    res0 = ''
+    for rec_counter in range(len(in0)):
+        if rec_counter < 900 and not stop.value:
+            rec_counter += 1
+            res0 += chr(ord(in0[rec_counter]) + 32)
+            rec_counter -= 1
+    return res0
+```
+
+**Example Usage:**
+
+```python
+checksum(""hello"")  # Output: ""h""
+checksum(""python"")  # Output: ""p""
+checksum(""This is a string."")  # Output: ""t""
+```"
+Digits,"```python
+def digits(n):
+    if n < 0:
+        res = [str(n % 10)[0] + '-' if n // 10 == 0 else str(n % 10)]
+    else:
+        res = [str(n % 10) for n // 10 in reversed(range(1, 10))]
+    return res
+```
+
+**Example Usage:**
+
+```python
+print(digits(123))  # Output: ['1', '2', '3']
+print(digits(-123))  # Output: '-3-2-1'
+```"
+Grade,"```python
+def evolve(i0, i1, i2, i3, i4, stop):
+    if rec_counter < 900 and not stop.value:
+        rec_counter += 1
+        res0 = 'A'
+    elif i4 >= i3 and not stop.value:
+        rec_counter += 1
+        res0 = 'B'
+    elif i4 >= i2 and not stop.value:
+        rec_counter += 1
+        res0 = 'C'
+    elif i4 >= i1 and not stop.value:
+        rec_counter += 1
+        res0 = 'D'
+    else:
+        res0 = 'F'
+    rec_counter -= 1
+    return res0
+```
+
+**Example Usage:**
+
+```python
+stop = {""value"": False}
+res = evolve(50, 60, 70, 80, 85, stop)
+print(res)  # Output: 'B'
+```"
+Median,"```python
+def median(i0, i1, i2):
+    global rec_counter
+    if rec_counter < 900 and not stop.value:
+        rec_counter += 1
+        res0 = evolve(i0, i1, i2)
+        rec_counter -= 1
+    else:
+        return res0
+```
+
+**Example Usage:**
+
+```python
+median(10, 20, 30)  # Output: 20
+```"
+Smallest,"```python
+def min(i0, i1, i2, i3):
+    res0 = min(i0, i1, i2, i3)
+    return res0
+```
+
+**Example Usage:**
+
+```python
+i0 = int()
+i1 = int()
+i2 = int()
+i3 = int()
+
+min(i0, i1, i2, i3)
+```"
+Syllables,"```python
+def countVowels(in0):
+    globals()['rec_counter'] = 0
+    global rec_counter
+    for i0 in in0.lower():
+        if rec_counter < 900 and not stop.value:
+            rec_counter += 1
+    return res0
+```
+
+**Example Usage:**
+```python
+countVowels(""The quick brown fox jumps over the lazy dog."")
+```
+
+**Output:**
+```
+3
+```"

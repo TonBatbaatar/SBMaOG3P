@@ -1,0 +1,201 @@
+NumberIO,"def sum_nums(in0, in1):
+    res0 = in0 + in1
+    return res0"
+SmallOrLarge,"def classify_number(in0):
+    if in0 < 1000:
+        res0 = ""small""
+    elif in0 >= 2000:
+        res0 = ""large""
+    return res0"
+ForLoopIndex,"def f(start, end, step):
+    res = []
+    n = start
+    while n < end:
+        res.append(n)
+        n += step
+    return res"
+CompareStringLengths,"def compare_lengths(in0, in1, in2):
+    return len(in0) < len(in1) < len(in2)"
+DoubleLetters,"def string_transform(in0):
+    res0 = """"
+    for char in in0:
+        if char.isalpha():
+            res0 += char * 2
+        elif char == '!':
+            res0 += char * 3
+        else:
+            res0 += char
+    return res0"
+CollatzNumbers,"def collatz_sequence_length(in0):
+    length = 1
+    while in0 != 1:
+        if in0 % 2 == 0:
+            in0 = in0 // 2
+        else:
+            in0 = 3 * in0 + 1
+        length += 1
+    return length"
+ReplaceSpacewithNewline,"def process_string(in0):
+    res0 = in0.replace("" "", ""\n"")
+    res1 = len(in0.replace("" "", """"))
+    return res0, res1"
+EvenSquares,"def even_perfect_squares(n):
+    res = []
+    i = 2
+    while i * i < n:
+        if i % 2 == 0:
+            res.append(i * i)
+        i += 1
+    return res"
+WallisPi,"def pi_approximation(n):
+    res0 = 1.0
+    for i in range(1, n+1):
+        res0 *= (2.0*i) / (2.0*i - 1.0)
+        res0 *= (2.0*i) / (2.0*i + 1.0)
+    return 4.0 * res0"
+StringLengthsBackwards,"def length_vector(in0):
+    res0 = []
+    for i in range(len(in0) - 1, -1, -1):
+        res0.append(len(in0[i]))
+    return res0"
+LastIndexofZero,"def last_zero_index(in0):
+    for i in range(len(in0)-1, -1, -1):
+        if in0[i] == 0:
+            return i
+    return -1"
+VectorAverage,"def avg(in0):
+    res0 = round(sum(in0) / len(in0), 4)
+    return res0"
+CountOdds,"def count_odd_numbers(in0):
+    res0 = sum(1 for num in in0 if num % 2 != 0)
+    return res0"
+MirrorImage,"def is_reverse(in0, in1):
+    res0 = len(in0) == len(in1)
+    for i in range(len(in0)):
+        res0 = res0 and in0[i] == in1[len(in1)-i-1]
+    return res0"
+SuperAnagrams,"def is_super_anagram(in0, in1):
+    res0 = False
+    if len(in0) > len(in1):
+        return res0
+    count = {}
+    for char in in0:
+        if char in count:
+            count[char] += 1
+        else:
+            count[char] = 1
+    for char in in1:
+        if char in count:
+            count[char] -= 1
+            if count[char] == 0:
+                del count[char]
+    if len(count) == 0:
+        res0 = True
+    return res0"
+SumofSquares,"def square_sum(in0):
+    res0 = sum([x*x for x in range(1, in0+1)])
+    return res0"
+VectorsSummed,"def vector_sum(in0, in1):
+    res0 = []
+    for i in range(len(in0)):
+        res0.append(in0[i] + in1[i])
+    return res0"
+X-WordLines,"def wrapping(in0, in1):
+    in1 = in1.split()
+    res0 = []
+    res1 = 0
+    for i in range(len(in1)):
+        if i % in0 == 0 and i != 0:
+            res0.append(""\n"")
+            res1 = res1 + 1
+        res0.append(in1[i])
+    return """".join(res0)"
+PigLatin,"def pig_latin(in0):
+    res0 = """"
+    words = in0.split()
+    for word in words:
+        if word[0] in ""aeiouAEIOU"":
+            res0 += word + ""ay ""
+        else:
+            res0 += word[1:] + word[0] + ""ay ""
+    return res0.strip()"
+NegativeToZero,"def replace_negatives(in0):
+    res0 = []
+    for i in in0:
+        if i < 0:
+            res0.append(0)
+        else:
+            res0.append(i)
+    return res0"
+ScrabbleScore,"def get_scrabble_score(in0):
+    score = 0
+    for char in in0.upper():
+        if char in 'AEIOULNRST':
+            score += 1
+        elif char in 'DG':
+            score += 2
+        elif char in 'BCMP':
+            score += 3
+        elif char in 'FHVWY':
+            score += 4
+        elif char in 'K':
+            score += 5
+        elif char in 'JX':
+            score += 8
+        elif char in 'QZ':
+            score += 10
+    return score"
+WordStats,"def count_words(in0):
+    words = in0.split()
+    max_length = max(len(word) for word in words)
+    word_counts = [0] * max_length
+
+    for word in words:
+        length = len(word)
+        if length <= max_length:
+            word_counts[length-1] += 1
+
+    sentence_terminators = ['.', '!', '?']
+    sentence_count = sum(1 for word in words if word[-1] in sentence_terminators)
+    average_sentence_length = len(words) / sentence_count
+
+    return word_counts, sentence_count, average_sentence_length"
+Checksum,"def checksum(in0):
+    res0 = 0
+    for char in in0:
+        res0 += ord(char)
+    res0 = (res0 % 64) + ord(' ')
+    return chr(res0)"
+Digits,"def int_to_digit_list(in0):
+    res0 = []
+    if in0 == 0:
+        res0.append(0)
+        return res0
+    negative = in0 < 0
+    in0 = abs(in0)
+    while in0 > 0:
+        res0.insert(0, in0 % 10)
+        in0 //= 10
+    if negative:
+        res0.append(-1)
+    return res0"
+Grade,"def letter_grade(in0, in1, in2, in3, in4):
+    if in4 >= in0:
+        res0 = 'A'
+    elif in4 >= in1:
+        res0 = 'B'
+    elif in4 >= in2:
+        res0 = 'C'
+    elif in4 >= in3:
+        res0 = 'D'
+    else:
+        res0 = 'F'
+    return res0"
+Median,"def median(in0, in1, in2):
+    res0 = sorted([in0, in1, in2])
+    return res0[1]"
+Smallest,"def smallest_int(in0, in1, in2, in3):
+    return min(in0, in1, in2, in3)"
+Syllables,"def count_vowels(in0):
+    res0 = sum(1 for char in in0 if char.lower() in 'aeiouy')
+    return res0"
